@@ -1,0 +1,23 @@
+
+<nz-layout nzWidth="475px" class="layout" >
+  <nz-header>
+    <div class="logo">
+     
+    </div>
+    <ul nz-menu nzTheme="dark" nzMode="horizontal" >
+      <li nz-menu-item [routerLink]="'./mantenimiento/constancia'">Constancia Principales</li>
+      <li nz-menu-item [routerLink]="'./mantenimiento/historico'">Historico Datos</li>
+      <li nz-menu-item>Valor Monomico</li>
+      <li nz-menu-item>Facturacion</li>
+      <li nz-menu-item>Facturas</li>
+      <li nz-menu-item>Ajustes</li>
+      <li nz-menu-item>Salir</li>
+    </ul>
+  </nz-header>
+  
+  <nz-content>
+    <div class="inner-content">
+      <router-outlet></router-outlet>
+    </div>
+  </nz-content>
+</nz-layout>

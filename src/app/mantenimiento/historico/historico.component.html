@@ -1,0 +1,39 @@
+<nz-table #groupingTable [nzData]="listOfData" nzBordered nzSize="small" nzShowPagination="false">
+    <thead>
+      <tr>
+        <th colspan="8">GILDAN T578</th>
+      </tr>
+      <tr>
+        <th rowspan="4" nzLeft> Fecha </th>
+        <th colspan="2">Energia Activa (kWh)</th>
+        <th colspan="2">Energia Reactiva (kVArh)</th>
+        <th rowspan="4">Potencia Activa (kW)</th>
+        <th rowspan="4">Potencia Reactiva (kVAr)</th>
+        <th rowspan="4" nzRight>Demanda Potencia Activa (kW)</th>
+      </tr>
+      <tr>
+        <th rowspan="3">Entregado</th>
+        <th rowspan="3">Recibido</th>
+      </tr>
+      <tr>
+        <th>Entregada</th>
+        <th>Recibida</th>
+      </tr>
+     
+ 
+       
+  
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of groupingTable.data">
+        <td nzLeft>{{ data.fecha }}</td>
+        <td>{{ data.entregadaAct }}</td>
+        <td>{{ data.recibidoAct }}</td>
+        <td>{{ data.entregadaReact }}</td>
+        <td>{{ data.recibidaReact}}</td>
+        <td>{{ data.potenciaAct }}</td>
+        <td>{{ data.potenciaReact }}</td>
+        <td nzRight>{{ data.demandaPot }}</td>
+      </tr>
+    </tbody>
+  </nz-table>
