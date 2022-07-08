@@ -6,11 +6,13 @@ import { ConstanciaComponent } from './constancia/constancia.component';
 import { HistoricoComponent } from './historico/historico.component';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzCardModule } from 'ng-zorro-antd/card';
+import { ReporteComponent } from './reporte/reporte.component';
 
 @NgModule({
   declarations: [
     ConstanciaComponent,
-    HistoricoComponent
+    HistoricoComponent,
+    ReporteComponent
   ],
   imports: [
     CommonModule,
