@@ -8,5 +8,6 @@ import { NzButtonSize } from 'ng-zorro-antd/button';
 })
 export class AppComponent {
   title = 'beco';
-  size: NzButtonSize = 'large';
+
+
 }

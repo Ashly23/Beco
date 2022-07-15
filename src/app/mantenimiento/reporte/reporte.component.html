@@ -1,10 +1,50 @@
-    <nz-card style="width:900px;" [nzBordered]="false" nzTitle="Card title" [nzExtra]="extraTemplate">
-      <p>Card content</p>
-      <p>Card content</p>
-      <p>Card content</p>
-    </nz-card>
-  <ng-template #extraTemplate>
-    <a>Generar Reporte
-       
-    </a>
-  </ng-template>
+<button nz-button nzType="primary" (click)="open()">Generar Reporte</button>
+
+<nz-drawer 
+  [nzClosable]="false"
+  [nzVisible]="visible"
+  [nzPlacement]="placement"
+  nzTitle="Reporte"
+  (nzOnClose)="close()"
+>
+<div style="background: rgb(190, 200, 200);padding: 26px 16px 16px;">
+  <ng-container style="background: #ECECEC;padding:30px;" *nzDrawerContent>
+    
+    <div nz-col nzSpan="8">
+      <nz-form-item>
+        <nz-form-label>Periodo</nz-form-label>
+          <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Selecciona un periodo">
+            <nz-option nzLabel="Jack" nzValue="jack"></nz-option>
+            <nz-option nzLabel="Lucy" nzValue="lucy"></nz-option>
+            <nz-option nzLabel="Tom" nzValue="tom"></nz-option>
+          </nz-select>
+      </nz-form-item>
+    </div>
+    <div nz-col nzSpan="8">
+      <nz-form-item>
+        <nz-form-label>Intervalo</nz-form-label>
+          <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Selecciona un intervalo">
+            <nz-option nzLabel="Jack" nzValue="jack"></nz-option>
+            <nz-option nzLabel="Lucy" nzValue="lucy"></nz-option>
+            <nz-option nzLabel="Tom" nzValue="tom"></nz-option>
+          </nz-select>
+      </nz-form-item>
+    </div>
+    <div nz-col nzSpan="8">
+      <nz-form-item>
+        <nz-form-label>Cliente</nz-form-label>
+          <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Selecciona un cliente">
+            <nz-option nzLabel="Jack" nzValue="jack"></nz-option>
+            <nz-option nzLabel="Lucy" nzValue="lucy"></nz-option>
+            <nz-option nzLabel="Tom" nzValue="tom"></nz-option>
+          </nz-select>
+      </nz-form-item>
+    </div>
+    <br> <br>
+    <button nz-button nzType="primary" nzValue="default" nzShape="round" [routerLink]="'../../mantenimiento/constancia'" nzBlock>
+      <i nz-icon nzType="search"></i>
+        Buscar
+      </button>
+        </ng-container>
+      </div>
+      </nz-drawer>

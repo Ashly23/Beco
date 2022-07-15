@@ -3,6 +3,14 @@
   <h2><b>Constancia Lecturas de Energia</b></h2>
 &nbsp;
 
+<div nz-row>
+  <div nz-col nzSpan="24">
+    <app-reporte></app-reporte>
+  </div>
+</div>
+
+
+
 <nz-card nzTitle="DATOS DEL CLIENTE" nzBordered nzTableLayout="fixed">
 <nz-table #smallTable nzTableLayout="fixed" nzSize="small" [nzData]="data" nzShowPagination="false">
         <tr *ngFor="let data of data">

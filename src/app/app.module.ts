@@ -33,7 +33,6 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     CommonModule,
     NzIconModule
-    
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
